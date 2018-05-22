@@ -11,6 +11,26 @@ const availability = [{
         seconds: 0
       },
       isAvailable: true
+    }, {
+      tourName: 'Tour Name 2',
+      seatsLeft: '4',
+      timer: {
+        days: 181,
+        hours: 15,
+        minutes: 20,
+        seconds: 0
+      },
+      isAvailable: true
+    }, {
+      tourName: 'Tour Name 3',
+      seatsLeft: '10+',
+      timer: {
+        days: 180,
+        hours: 15,
+        minutes: 20,
+        seconds: 0
+      },
+      isAvailable: true
     }]
   },{
     groupName: 'Group2',
@@ -19,6 +39,26 @@ const availability = [{
       seatsLeft: '6',
       timer: {
         days: 152,
+        hours: 15,
+        minutes: 20,
+        seconds: 0
+      },
+      isAvailable: true
+    }, {
+      tourName: 'Tour Name 5',
+      seatsLeft: '2',
+      timer: {
+        days: 122,
+        hours: 15,
+        minutes: 20,
+        seconds: 0
+      },
+      isAvailable: true
+    }, {
+      tourName: 'Tour Name 6',
+      seatsLeft: '7',
+      timer: {
+        days: 92,
         hours: 15,
         minutes: 20,
         seconds: 0
@@ -37,6 +77,16 @@ const availability = [{
         seconds: 0
       },
       isAvailable: false
+    }, {
+      tourName: 'Tour Name 8',
+      seatsLeft: '5',
+      timer: {
+        days: 212,
+        hours: 15,
+        minutes: 20,
+        seconds: 0
+      },
+      isAvailable: true
     }]
   }]
 }];

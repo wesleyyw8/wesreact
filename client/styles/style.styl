@@ -8,6 +8,11 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+  .title {
+    width: 100%;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
   .group-item {
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +27,7 @@
     background: #fff;
     box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
     position: relative;
-    @media only screen and (max-device-width: 480px){
+    @media only screen and (max-width: 480px){
       flex-basis: calc(100vw - 10rem);
     }
   }
@@ -50,7 +55,7 @@
   button {
     border: 2px solid #f2f2f2;
     background: none;
-    flex-basis: 48%;
+    width: 100%;
     display: inline-block;
     line-height: 2;
     text-decoration: none;
@@ -58,7 +63,5 @@
     text-align: center;
     font-size: 15px;
     color: #125688;
-    transition: all 0.2s;
-    box-sizing: padding-box;
   }
 }

@@ -6,7 +6,8 @@ import css from  './styles/style.styl';
 
 //import components
 import App from './components/App';
-import Availability from './components/Availability';
+import Groups from './components/Groups';
+import Tours from './components/Tours';
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
@@ -16,9 +17,9 @@ const router = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={Availability}></IndexRoute>
+        <IndexRoute component={Groups}></IndexRoute>
+        <Route path="/tour/:tourId" component={Tours}></Route>
       </Route>
-      <Route></Route>
     </Router>
   </Provider>
 )

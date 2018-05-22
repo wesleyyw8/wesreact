@@ -7,7 +7,7 @@ import css from  './styles/style.styl';
 //import components
 import App from './components/App';
 import Groups from './components/Groups';
-import Tours from './components/Tours';
+import Tour from './components/Tour';
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
@@ -18,7 +18,7 @@ const router = (
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Groups}></IndexRoute>
-        <Route path="/tour/:tourId" component={Tours}></Route>
+        <Route path="/tour/:tourId" component={Tour}></Route>
       </Route>
     </Router>
   </Provider>

@@ -1,14 +1,14 @@
 import React from 'react';
 import SingleTour from './SingleTour';
 
-const Tours = React.createClass({
+const Tour = React.createClass({
   render() {
     return(
-      <div className="tours">
+      <div className="single-tour">
         <SingleTour />
       </div>
     )
   }
 });
 
-export default Tours;
+export default Tour;

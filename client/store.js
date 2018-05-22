@@ -4,8 +4,10 @@ import { browserHistory } from 'react-router';
 
 import rootReducer from './reducers/index';
 
+import availability from './data/availability';
+
 const defaultState = {
-  test: {}
+  availability
 };
 
 const enhancers = compose(

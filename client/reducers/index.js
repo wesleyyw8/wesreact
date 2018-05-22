@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import test from './test';
+import availability from './availability';
 
 const rootReducer = combineReducers({
-  test, routing: routerReducer
+  availability, routing: routerReducer
 })
 
 export default rootReducer;

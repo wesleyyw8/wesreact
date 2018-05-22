@@ -1,4 +1,4 @@
-const availability = [{
+const availability = {
   groups: [{
     groupName: 'Group1',
     tours: [{
@@ -89,4 +89,6 @@ const availability = [{
       isAvailable: true
     }]
   }]
-}];
+};
+
+export default availability;

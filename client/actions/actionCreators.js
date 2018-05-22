@@ -1,7 +1,8 @@
-export function test(index) {
+export function buildRemoveSeatsLeftAction(groupIndex, tourIndex) {
   console.log('action!!!');
   return {
-    type: 'TEST',
-    index
+    type: 'REMOVE_SEATS_LEFT',
+    groupIndex,
+    tourIndex
   };
 }

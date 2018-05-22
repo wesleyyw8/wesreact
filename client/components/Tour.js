@@ -3,7 +3,7 @@ import React from 'react';
 const Tour = React.createClass({
   onBookingClick(e) {
     e.preventDefault();
-    this.props.test();
+    this.props.buildRemoveSeatsLeftAction();
   },
   render() {
     const tour = this.props.tour;

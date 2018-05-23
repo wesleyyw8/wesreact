@@ -5,10 +5,10 @@ function groups(state = {}, action = {}) {
   switch (action.type) {
     case 'EDIT_SEATS_LEFT': 
       const tourIndex = get(action, 'data.tourIndex', null)
-      return {
+      return [{
         ...state,
         tours: tours(state.tours[tourIndex], action)
-      }
+      }]
     default: 
       return state;
   }

@@ -17,9 +17,9 @@ describe('tours reducer', () => {
       type: 'EDIT_SEATS_LEFT'
     };
 
-    expect(tours(state, action)).toEqual([{
+    expect(tours(state, action)).toEqual({
       test: 123,
       seatsLeft: 3
-    }]);
+    });
   });
 });

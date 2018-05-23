@@ -22,6 +22,16 @@ describe('groups reducer', () => {
           seconds: 0
         },
         isAvailable: true
+      },{
+        tourName: 'Tour Name 2',
+        seatsLeft: 3,
+        timer: {
+          days: 181,
+          hours: 15,
+          minutes: 20,
+          seconds: 0
+        },
+        isAvailable: true
       }]
     };
     const action = {
@@ -32,7 +42,7 @@ describe('groups reducer', () => {
       },
       type: 'EDIT_SEATS_LEFT'
     };
-    expect(groups(state, action)).toEqual([{
+    expect(groups(state, action)).toEqual({
       groupName: 'Group1',
       tours: [{
         tourName: 'Tour Name 1',
@@ -44,7 +54,17 @@ describe('groups reducer', () => {
           seconds: 0
         },
         isAvailable: true
+      },{
+        tourName: 'Tour Name 2',
+        seatsLeft: 3,
+        timer: {
+          days: 181,
+          hours: 15,
+          minutes: 20,
+          seconds: 0
+        },
+        isAvailable: true
       }]
-    }]);
+    });
   });
 });

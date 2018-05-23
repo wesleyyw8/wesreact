@@ -7,8 +7,11 @@ function availability(state = {}, action = {}) {
     case 'EDIT_SEATS_LEFT': 
       const groupIndex = get(action, 'data.groupIndex', null);
       return {
-        ...state,
-        groups: groups(state.groups[groupIndex], action)
+        groups: [
+          ...state.groups.slice(0, groupIndex),
+          groups(state.groups[groupIndex], action),
+          ...state.groups.slice(groupIndex+1)
+        ]
       }
     default: 
       return state;

@@ -4,10 +4,10 @@ function tours(state = {}, action = {}) {
   switch (action.type) {
     case 'EDIT_SEATS_LEFT': 
     const { seatsLeft } = get(action, 'data', null)
-      return [{
+      return {
         ...state,
         seatsLeft,
-      }]
+      }
     default: 
       return state;
   }

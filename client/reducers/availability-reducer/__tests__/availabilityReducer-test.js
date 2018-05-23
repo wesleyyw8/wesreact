@@ -1,26 +1,16 @@
-import validationReducer from '../availabilityReducer';
+import availability from '../availabilityReducer';
 
 describe('availability reducer', () => {
-
   const state = {
     availability: {
-      groups: [{
-        groupName: 'Group1',
-        tours: [{
-          tourName: 'Tour Name 1',
-          seatsLeft: 5,
-          timer: {
-            days: 182,
-            hours: 15,
-            minutes: 20,
-            seconds: 0
-          },
-          isAvailable: true
-        }]
-      }]
+      test: 123
     }
   };
   it('should equal true', () => {
-    expect(true).toEqual(true);
+    expect(availability(state)).toEqual({
+      availability: {
+        test: 123
+      }
+    });
   });
 });

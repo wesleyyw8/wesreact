@@ -1,6 +1,6 @@
 import get from 'lodash/get';
 
-function tours(state = {}, action) {
+function tours(state = {}, action = {}) {
   switch (action.type) {
     case 'EDIT_SEATS_LEFT': 
     const seatsLeft = get(action, 'data.seatsLeft', 0)

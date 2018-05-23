@@ -1,4 +1,4 @@
-export function buildRemoveSeatsLeftAction(groupIndex, tourIndex, seatsLeft) {
+export function buildEditSeatsLeftAction(groupIndex, tourIndex, seatsLeft) {
   return {
     type: 'EDIT_SEATS_LEFT', 
     data: {

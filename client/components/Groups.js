@@ -1,20 +1,10 @@
 import React from 'react';
-import TourConnectors from './Tour-connectors';
+import Group from './Group';
 
 const Groups = React.createClass({
-  renderTour(tour, i) {
-    return (
-      <TourConnectors key={i} tour={tour} tourIndex={i} {...this.props}/>
-    )
-  },
   renderGroupItem(group, i) {
     return (
-      <div className="group-item" key={i} groupIndex={i}>
-        <div className="title">
-          <p>{group.groupName}</p>
-        </div>
-        {group.tours.map(this.renderTour)}
-      </div>
+      <Group key={i} groupIndex={i} group={group} />
     )
   },
   render() {

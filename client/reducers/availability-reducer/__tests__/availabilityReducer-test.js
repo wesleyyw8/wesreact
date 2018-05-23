@@ -1,6 +1,7 @@
 import validationReducer from '../availabilityReducer';
 
 describe('availability reducer', () => {
+
   const state = {
     availability: {
       groups: [{
@@ -19,5 +20,7 @@ describe('availability reducer', () => {
       }]
     }
   };
-  expect(true).toEqual(true);
+  it('should equal true', () => {
+      expect(true).toEqual(true);
+    });
 });

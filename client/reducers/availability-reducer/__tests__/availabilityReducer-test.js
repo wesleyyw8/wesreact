@@ -19,5 +19,5 @@ describe('availability reducer', () => {
       }]
     }
   };
-  expect(true).toEquals(true);
+  expect(true).toEqual(true);
 });

@@ -21,6 +21,6 @@ describe('availability reducer', () => {
     }
   };
   it('should equal true', () => {
-      expect(true).toEqual(true);
-    });
+    expect(true).toEqual(true);
+  });
 });

@@ -3,10 +3,16 @@ import React from 'react';
 const Tour = React.createClass({
   onBookingClick(e) {
     e.preventDefault();
-    this.props.buildEditSeatsLeftAction(this.props.groupIndex, this.props.tourIndex, (this.props.tour.seatsLeft -1));
+    if (this.props.tour.seatsLeft === 1) {
+      this.props.buildEditIsAvailableAction(this.props.groupIndex, this.props.tourIndex, false);
+    }
+    if (this.props.tour.seatsLeft > 0) {
+      this.props.buildEditSeatsLeftAction(this.props.groupIndex, this.props.tourIndex, (this.props.tour.seatsLeft -1));
+    }
   },
   render() {
     const tour = this.props.tour;
+    const onBookingButton = <button onClick={this.onBookingClick}>Book now!</button>
     return(
       <div className="grid-figure">
         <div className="grid-photo-wrap">
@@ -18,9 +24,7 @@ const Tour = React.createClass({
         <div className="figure-caption">
           <p>{tour.tourName}</p>
           <p>Seats left: {tour.seatsLeft >= 10 ? '10+' : tour.seatsLeft}</p>
-          <button onClick={this.onBookingClick}>
-            Book now!
-          </button>
+            {tour.isAvailable ?  onBookingButton : ''}
         </div>
       </div>
     )

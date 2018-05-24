@@ -9,10 +9,10 @@ function mapStateToProps(state) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(actionCreators, dispatch);
-}
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators(actionCreators, dispatch);
+// }
 
-const MainConnectors = connect(mapStateToProps, mapDispatchToProps)(Main);
+const MainConnectors = connect(mapStateToProps, null)(Main);
 
 export default MainConnectors;

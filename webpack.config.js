@@ -29,5 +29,10 @@ module.exports = {
       loader: 'style-loader!css-loader!stylus-loader'
     }
     ]
+  },
+  resolve: {
+    alias: {
+      'actions': path.resolve(__dirname, 'client/actions')
+    }
   }
 };

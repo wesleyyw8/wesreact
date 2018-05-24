@@ -1,5 +1,6 @@
 import availability from '../availabilityReducer';
-
+import { EDIT_SEATS_LEFT } from 'actions';
+ 
 describe('availability reducer', () => {
   const state = {
     groups: [{
@@ -37,7 +38,7 @@ describe('availability reducer', () => {
   });
   it('handles the EDIT_SEATS_LEFT', () => {
     const action = {
-      type: 'EDIT_SEATS_LEFT',
+      type: EDIT_SEATS_LEFT,
       data: {
         groupIndex: 0,
         tourIndex: 0,

@@ -6,6 +6,10 @@ const Tour = React.createClass({
     const { timer } = this.props.tour
     const x = setInterval(() => {
       countDown(this.props.groupIndex, this.props.tourIndex, timer, this.props.buildEditTimerAction);
+      if (timer.days === 0 && timer.hours === 0 && timer.minutes === 0 && timer.seconds === 0) {
+        this.props.buildEditIsAvailableAction(this.props.groupIndex, this.props.tourIndex, false);
+        clearInterval(x);
+      }
     }, 1000);
 
   },

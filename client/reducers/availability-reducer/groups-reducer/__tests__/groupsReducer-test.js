@@ -26,6 +26,9 @@ describe('groups reducer', () => {
       }
     }]
   };
+  it('handles the group reducer with no action and no state', () => {
+    expect(groups()).toEqual({});
+  });
   it('handles the group reducer with no action', () => {
     expect(groups(state)).toEqual(state);
   });

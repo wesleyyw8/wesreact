@@ -5,6 +5,9 @@ describe('tours reducer', () => {
   const state = {
     test: 123
   };
+  it('handles the EDIT_SEATS_LEFT when there is no action and no state', () => {
+    expect(tours()).toEqual({});
+  });
   it('handles the EDIT_SEATS_LEFT when there is no action', () => {
     expect(tours(state)).toEqual({
       test: 123

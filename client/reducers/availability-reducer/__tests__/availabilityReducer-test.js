@@ -1,5 +1,5 @@
 import availability from '../availabilityReducer';
-import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY } from 'actions';
+import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY, EDIT_TIMER } from 'actions';
  
 describe('availability reducer', () => {
   const state = {
@@ -18,6 +18,9 @@ describe('availability reducer', () => {
       }]
     }]
   };
+  it('handles the availability when there is no action and no state', () => {
+    expect(availability()).toEqual({});
+  });
   it('handles the availability when there is no action', () => {
     expect(availability(state)).toEqual({
       groups: [{
@@ -62,15 +65,34 @@ describe('availability reducer', () => {
       }]
     });
   });
+  it('handles the EDIT_SEATS_LEFT', () => {
+    const action = {
+      type: EDIT_SEATS_LEFT,
+      data: {
+        groupIndex: 0,
+        tourIndex: 0,
+        seatsLeft: 5
+      }
+    }
+    expect(availability(state, action)).toEqual(state);
+  });
   it('handles the EDIT_TIMER', () => {
     state.groups[0].tours[0].timer = 'test';
-    expect(availability(state)).toEqual({
+    const action = {
+      type: EDIT_TIMER,
+      data: {
+        groupIndex: 0,
+        tourIndex: 0,
+        timer: 'abc'
+      }
+    }
+    expect(availability(state, action)).toEqual({
       groups: [{
         groupName: 'Group1',
         tours: [{
           tourName: 'Tour Name 1',
           seatsLeft: 5,
-          timer: 'test',
+          timer: 'abc',
           isAvailable: true
         }]
       }]

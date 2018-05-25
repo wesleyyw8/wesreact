@@ -25,10 +25,10 @@ const availability = {
       tourName: 'Tour Name 3',
       seatsLeft: 11,
       timer: {
-        days: 180,
-        hours: 15,
-        minutes: 20,
-        seconds: 0
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 10
       },
       isAvailable: true
     }]

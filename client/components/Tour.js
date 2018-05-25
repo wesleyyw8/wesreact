@@ -3,9 +3,11 @@ import { countDown } from './countDown';
 
 const Tour = React.createClass({
   componentDidMount() {
+    const { timer } = this.props.tour
     const x = setInterval(() => {
-      countDown(this.props.groupIndex, this.props.tourIndex, this.props.tour.timer, this.props.buildEditTimerAction);
+      countDown(this.props.groupIndex, this.props.tourIndex, timer, this.props.buildEditTimerAction);
     }, 1000);
+
   },
   onBookingClick(e) {
     e.preventDefault();
@@ -28,7 +30,7 @@ const Tour = React.createClass({
     return(
       <div className="grid-figure">
         <div className="count-down">
-          {this.props.tour.timer.days} days {timerFormated.hours}:{timerFormated.minutes}:{timerFormated.seconds}
+          {`${this.props.tour.timer.days > 0 ? 'days' : ''}`} {timerFormated.hours}:{timerFormated.minutes}:{timerFormated.seconds}
         </div>
         <div className="grid-photo-wrap">
           <img 

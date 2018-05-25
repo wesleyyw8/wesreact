@@ -1,6 +1,6 @@
-import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY } from 'actions';
+import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY, EDIT_TIMER } from 'actions';
 
-export function buildEditSeatsLeftAction(groupIndex, tourIndex, seatsLeft) {
+export const buildEditSeatsLeftAction = (groupIndex, tourIndex, seatsLeft) => {
   return {
     type: EDIT_SEATS_LEFT, 
     data: {
@@ -11,7 +11,7 @@ export function buildEditSeatsLeftAction(groupIndex, tourIndex, seatsLeft) {
   };
 }
 
-export function buildEditIsAvailableAction(groupIndex, tourIndex, isAvailable) {
+export const buildEditIsAvailableAction = (groupIndex, tourIndex, isAvailable) => {
   return {
     type: EDIT_AVAILABILITY, 
     data: {
@@ -20,4 +20,15 @@ export function buildEditIsAvailableAction(groupIndex, tourIndex, isAvailable) {
       isAvailable
     }
   }; 
+}
+
+export const buildEditTimerAction = (groupIndex, tourIndex, timer) => {
+  return {
+    type: EDIT_TIMER,
+    data: {
+      groupIndex,
+      tourIndex,
+      timer
+    }
+  }
 }

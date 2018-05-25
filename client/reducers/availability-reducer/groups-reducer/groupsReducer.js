@@ -1,6 +1,6 @@
 import get from 'lodash/get';
 import tours from './tours-reducer/toursReducer';
-import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY } from 'actions';
+import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY, EDIT_TIMER } from 'actions';
 
 function groups(state = {}, action = {}) {
   const tourIndex = get(action, 'data.tourIndex', null)
@@ -15,6 +15,15 @@ function groups(state = {}, action = {}) {
         ]
       }
     case EDIT_AVAILABILITY: 
+      return {
+        groupName: state.groupName,
+        tours: [
+          ...state.tours.slice(0, tourIndex),
+          tours(state.tours[tourIndex], action),
+          ...state.tours.slice(tourIndex+1),
+        ]
+      }
+    case EDIT_TIMER: 
       return {
         groupName: state.groupName,
         tours: [

@@ -18,7 +18,7 @@ describe('availability reducer', () => {
       }]
     }]
   };
-  it('handles the EDIT_SEATS_LEFT when there is no action', () => {
+  it('handles the availability when there is no action', () => {
     expect(availability(state)).toEqual({
       groups: [{
         groupName: 'Group1',
@@ -62,7 +62,18 @@ describe('availability reducer', () => {
       }]
     });
   });
-  it('handles the EDIT_SEATS_LEFT when there is no action', () => {
-    expect(availability(state)).toEqual(state);
+  it('handles the EDIT_TIMER', () => {
+    state.groups[0].tours[0].timer = 'test';
+    expect(availability(state)).toEqual({
+      groups: [{
+        groupName: 'Group1',
+        tours: [{
+          tourName: 'Tour Name 1',
+          seatsLeft: 5,
+          timer: 'test',
+          isAvailable: true
+        }]
+      }]
+    });
   });
 });

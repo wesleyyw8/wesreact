@@ -1,5 +1,5 @@
 import tours from '../toursReducer';
-import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY } from 'actions';
+import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY, EDIT_TIMER } from 'actions';
 
 describe('tours reducer', () => {
   const state = {
@@ -50,6 +50,34 @@ describe('tours reducer', () => {
   it('handles the EDIT_AVAILABILITY with no action', () => {
     expect(tours(state)).toEqual({
       test: 123
+    });
+  });
+
+  it('handles the EDIT_TIMER with no action', () => {
+    expect(tours(state)).toEqual({
+      test: 123
+    });
+  });
+  it('handles the EDIT_TIMER', () => {
+    const action = {
+      type: EDIT_TIMER,
+      data: {
+        timer: {
+          days: 10,
+          hours: 12,
+          minutes: 23,
+          seconds: 20
+        }
+      }
+    };
+    expect(tours(state, action)).toEqual({
+      test: 123,
+      timer: {
+        days: 10,
+        hours: 12,
+        minutes: 23,
+        seconds: 20
+      }
     });
   });
 });

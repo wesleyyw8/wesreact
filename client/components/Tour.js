@@ -1,6 +1,10 @@
 import React from 'react';
+import { timer } from './countDownTimer';
 
 const Tour = React.createClass({
+  componentDidMount() {
+    timer(this.props.buildEditTimer);
+  },
   onBookingClick(e) {
     e.preventDefault();
     if (this.props.tour.seatsLeft === 1) {

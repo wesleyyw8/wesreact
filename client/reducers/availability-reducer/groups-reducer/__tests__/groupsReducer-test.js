@@ -1,5 +1,5 @@
 import groups from '../groupsReducer';
-import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY } from 'actions';
+import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY, EDIT_TIMER } from 'actions';
 
 describe('groups reducer', () => {
   const state = {
@@ -26,14 +26,10 @@ describe('groups reducer', () => {
       }
     }]
   };
-  it('handles the EDIT_SEATS_LEFT when there is no action', () => {
-    const state2 = {
-      test: 123
-    };
-    expect(groups(state2)).toEqual({
-      test: 123
-    });
+  it('handles the group reducer with no action', () => {
+    expect(groups(state)).toEqual(state);
   });
+
   it('handles the EDIT_SEATS_LEFT', () => {
     const action = {
       data: {
@@ -102,7 +98,16 @@ describe('groups reducer', () => {
       }]
     });
   });
-  it('handles the EDIT_AVAILABILITY with no action', () => {
-    expect(groups(state)).toEqual(state);
+
+  it ('handles the EDIT_TIMER', () => {
+    const action = {
+      type: EDIT_TIMER,
+      data: {
+        tourIndex: 0,
+        timer: 'abc'
+      }
+    }
+    state.tours[0].timer = 'abc';
+    expect(groups(state, action)).toEqual(state);
   });
 });

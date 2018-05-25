@@ -1,5 +1,5 @@
 import get from 'lodash/get';
-import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY } from 'actions';
+import { EDIT_SEATS_LEFT, EDIT_AVAILABILITY, EDIT_TIMER } from 'actions';
 
 function tours(state = {}, action = {}) {
   switch (action.type) {
@@ -14,6 +14,12 @@ function tours(state = {}, action = {}) {
       return {
         ...state,
         isAvailable
+      }
+    case EDIT_TIMER: 
+      const { timer } = get(action, 'data', null);
+      return {
+        ...state,
+        timer
       }
     default: 
       return state;

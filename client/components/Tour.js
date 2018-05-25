@@ -1,9 +1,11 @@
 import React from 'react';
-import { timer } from './countDownTimer';
+import { countDown } from './countDown';
 
 const Tour = React.createClass({
   componentDidMount() {
-    timer(this.props.buildEditTimer);
+    const x = setInterval(() => {
+      countDown(this.props.groupIndex, this.props.tourIndex, this.props.tour.timer, this.props.buildEditTimerAction);
+    }, 1000);
   },
   onBookingClick(e) {
     e.preventDefault();
@@ -17,8 +19,17 @@ const Tour = React.createClass({
   render() {
     const tour = this.props.tour;
     const onBookingButton = <button onClick={this.onBookingClick} className={'button ' + (!tour.isAvailable ? 'disabled' : 'hidden')} >Book now!</button>
+    const timerFormated = {
+      hours: tour.timer.hours,
+      minutes: tour.timer.minutes < 10 ? `0${tour.timer.minutes}` : tour.timer.minutes,
+      seconds: tour.timer.seconds  < 10 ? `0${tour.timer.seconds}` : tour.timer.seconds
+    };
+
     return(
       <div className="grid-figure">
+        <div className="count-down">
+          {this.props.tour.timer.days} days {timerFormated.hours}:{timerFormated.minutes}:{timerFormated.seconds}
+        </div>
         <div className="grid-photo-wrap">
           <img 
             src="https://cdn.tourradar.com/s3/tour/645x430/24087_1ac9705f.jpg" 

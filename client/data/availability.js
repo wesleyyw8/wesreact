@@ -8,7 +8,7 @@ const availability = {
         days: 182,
         hours: 15,
         minutes: 20,
-        seconds: 0
+        seconds: 12
       },
       isAvailable: true
     }, {

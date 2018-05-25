@@ -23,6 +23,7 @@
     flex-shrink: 0;
     margin: 0 2rem 2rem 2rem;
     padding: 2rem;
+    padding-bottom: 1rem;
     border: 1px solid #edeeed;
     background: #fff;
     box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
@@ -52,16 +53,24 @@
     line-height: 1.5;
   }
 
-  button {
-    border: 2px solid #f2f2f2;
-    background: none;
-    width: 100%;
+  .button { 
     display: inline-block;
-    line-height: 2;
+    width: 100%;
     text-decoration: none;
-    padding: 5px;
-    text-align: center;
-    font-size: 15px;
-    color: #125688;
+    border:1px solid #25729a; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-family:arial, helvetica, sans-serif; 
+    padding: 10px 10px 10px 10px; 
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    text-align: center; 
+    color: #FFFFFF; 
+    background-color: #3093c7;
+  }
+  .button.disabled {
+    background-color: gray;
+    border-color: gray;
+    cursor: not-allowed;
   }
 }

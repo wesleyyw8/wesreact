@@ -102,7 +102,7 @@ describe('groups reducer', () => {
       }]
     });
   });
-  // it('handles the EDIT_AVAILABILITY with no action', () => {
-
-  // });
+  it('handles the EDIT_AVAILABILITY with no action', () => {
+    expect(groups(state)).toEqual(state);
+  });
 });

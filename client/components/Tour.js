@@ -12,7 +12,7 @@ const Tour = React.createClass({
   },
   render() {
     const tour = this.props.tour;
-    const onBookingButton = <button onClick={this.onBookingClick}>Book now!</button>
+    const onBookingButton = <button onClick={this.onBookingClick} className={'button ' + (!tour.isAvailable ? 'disabled' : 'hidden')} >Book now!</button>
     return(
       <div className="grid-figure">
         <div className="grid-photo-wrap">
@@ -24,7 +24,7 @@ const Tour = React.createClass({
         <div className="figure-caption">
           <p>{tour.tourName}</p>
           <p>Seats left: {tour.seatsLeft >= 10 ? '10+' : tour.seatsLeft}</p>
-            {tour.isAvailable ?  onBookingButton : ''}
+            {onBookingButton}
         </div>
       </div>
     )

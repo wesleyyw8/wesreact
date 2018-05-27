@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 const Main = React.createClass({
   render() {
     return(
       <div>
-        <h1>
-          <Link to="/">Wes Test</Link>
-        </h1>
+        <div className="nav-bar">
+          Wesley Rebelo - wesleyyw8@gmail.com
+        </div>
         {React.cloneElement(this.props.children, this.props)}
       </div>
     )

@@ -35,6 +35,20 @@
       flex-basis: calc(100vw - 10rem);
     }
   }
+  .red-flag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: 2;
+    opacity: 0;
+    &.active {
+      opacity: 0.7;
+      transition: all 2s;
+    }
+  }
   .single-tour {
     max-width: 900px;
     margin: 0 auto;

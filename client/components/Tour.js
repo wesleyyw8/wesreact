@@ -33,6 +33,7 @@ const Tour = React.createClass({
 
     return(
       <div className="grid-figure">
+        <div className={'red-flag ' + (!tour.isAvailable ? 'active': '')}></div>
         <div className="count-down">
           {`${this.props.tour.timer.days > 0 ? 'days' : ''}`} {timerFormated.hours}:{timerFormated.minutes}:{timerFormated.seconds}
         </div>

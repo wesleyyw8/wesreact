@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1527845743909" clover="3.2.0">
+  <project timestamp="1527845743909" name="All files">
+    <metrics statements="26" coveredstatements="26" conditionals="18" coveredconditionals="18" methods="6" coveredmethods="6" elements="50" coveredelements="50" complexity="0" loc="26" ncloc="26" packages="4" files="4" classes="4">
+      <package name="actions">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="actionCreators.js" path="/Users/wrebelo/work/wesreact/client/actions/actionCreators.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="reducers.availability-reducer">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <file name="availabilityReducer.js" path="/Users/wrebelo/work/wesreact/client/reducers/availability-reducer/availabilityReducer.js">
+          <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+          <line num="6" count="5" type="stmt"/>
+          <line num="7" count="5" type="cond" truecount="4" falsecount="0"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="33" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="reducers.availability-reducer.groups-reducer">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <file name="groupsReducer.js" path="/Users/wrebelo/work/wesreact/client/reducers/availability-reducer/groups-reducer/groupsReducer.js">
+          <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+          <line num="6" count="8" type="stmt"/>
+          <line num="7" count="8" type="cond" truecount="4" falsecount="0"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="36" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="reducers.availability-reducer.groups-reducer.tours-reducer">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <file name="toursReducer.js" path="/Users/wrebelo/work/wesreact/client/reducers/availability-reducer/groups-reducer/tours-reducer/toursReducer.js">
+          <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+          <line num="5" count="14" type="cond" truecount="4" falsecount="0"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="14" count="4" type="stmt"/>
+          <line num="19" count="3" type="stmt"/>
+          <line num="20" count="3" type="stmt"/>
+          <line num="25" count="4" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
